@@ -7,12 +7,6 @@
 # 1. Tags are currently based on hash - which will not sort asciibetically.
 #    We need to declare standard versioning if people want to sort latest releases.
 #    In the meantime, YYYYMMDD format will be used.
-# 2. Builds for CUDA/OpenCL support are separate, with different depenedencies.
-# 3. NVidia's developer repo must be enabled with nvcc, cublas, clblas, etc installed.
-#    Example: https://developer.download.nvidia.com/compute/cuda/repos/fedora37/x86_64/cuda-fedora37.repo
-# 4. OpenCL/CLBLAST support simply requires the ICD loader and basic opencl libraries.
-#    It is up to the user to install the correct vendor-specific support.
-
 Name:           llama.cpp-vulkan
 Version:        %( date "+%%Y%%m%%d" )
 Release:        1%{?dist}
